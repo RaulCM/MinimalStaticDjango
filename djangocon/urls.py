@@ -3,7 +3,7 @@ Definition of urls for djangocon.
 """
 
 from datetime import datetime
-from django.conf.urls import url
+from django.conf.urls import include, url
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -11,8 +11,8 @@ from django.conf.urls import url
 # admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', 'app.views.home', name='home'),
-    url(r'^anotherpage/', 'app.views.anotherpage', name='anotherpage'),
+    url(r'^$', include(app.views.home), name='home'),
+    url(r'^anotherpage/', include(app.views.anotherpage), name='anotherpage'),
     #url(r'^$', views.holamundo, name='holamundo'),
 ]
 
