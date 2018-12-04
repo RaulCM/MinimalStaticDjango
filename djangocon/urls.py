@@ -11,8 +11,8 @@ from django.conf.urls import include, url
 # admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', include(app.views.home), name='home'),
-    url(r'^anotherpage/', include(app.views.anotherpage), name='anotherpage'),
+    url(r'^$', include('app.views.home'), name='home'),
+    url(r'^anotherpage/', include('app.views.anotherpage'), name='anotherpage'),
     #url(r'^$', views.holamundo, name='holamundo'),
 ]
 
