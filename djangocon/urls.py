@@ -3,17 +3,23 @@ Definition of urls for djangocon.
 """
 
 from datetime import datetime
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
-    # Examples:
+urlpatterns = [
     url(r'^$', 'app.views.home', name='home'),
     url(r'^anotherpage/', 'app.views.anotherpage', name='anotherpage'),
+    #url(r'^$', views.holamundo, name='holamundo'),
+]
+
+# urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'app.views.home', name='home'),
+    # url(r'^anotherpage/', 'app.views.anotherpage', name='anotherpage'),
     # url(r'^additional_resources/', 'app.views.additional_resources', name='additional_resources'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
