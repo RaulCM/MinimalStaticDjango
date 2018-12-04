@@ -9,8 +9,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = (
-    'localhost',
-    'https://minimalstaticdjango7eaa.azurewebsites.net/',
+    '*',
 )
 
 ADMINS = (
